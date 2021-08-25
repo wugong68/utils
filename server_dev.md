@@ -51,5 +51,5 @@ cd $WEB && /usr/bin/git pull && docker run --rm -v $WEB:/root node:12 /bin/bash 
 SERVER='/home/ubuntu/back/back-api'
 WEBPUB='/home/ubuntu/gserver/server1/'
 
-cd $SERVER  && rm -r packed && /usr/bin/git pull && docker run --rm -v $SERVER:/root golang:alpine /bin/sh -c "cd /root &&  CGO_ENABLED=0 go build -ldflags=\"-s -w\" ." && mv ${!SERVER}/outbin $WEBPUB
+cd $SERVER  && rm -r packed && /usr/bin/git pull && docker run --rm -v $SERVER:/root golang:alpine /bin/sh -c "cd /root && GOPROXY=https://goproxy.io,direct  CGO_ENABLED=0 go build -ldflags=\"-s -w\" ." && mv ${!SERVER}/outbin $WEBPUB
 ~~~
