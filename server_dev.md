@@ -18,7 +18,6 @@ WEB='/home/ubuntu/font-web'
 
 cd $WEB &&  docker run --rm -v $WEB:/root  node:12 /bin/bash -c "cd /root && npm install"
 
--- cd /home/ubuntu/caddy/back/gfast-web &&  docker run --rm -v /home/ubuntu/caddy/back/gfast-web:/root  node:12 /bin/bash -c "cd /root && npm install"
 ~~~
 
 
