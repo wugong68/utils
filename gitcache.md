@@ -8,3 +8,9 @@ git add .
 
 # 3. （可选）提交当前Git版本并备注说明
 git commit -m 'update .gitignore'
+
+
+
+# git remember auto
+git config --global credential.helper store
+
